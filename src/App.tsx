@@ -35,6 +35,15 @@ type FeatureCard = {
   accent: string
 }
 
+type PlanUpgrade = {
+  title: string
+  level: string
+  summary: string
+  move: string
+  benefit: string
+  tags: string[]
+}
+
 const moodLabels: Record<MoodPreset, string> = {
   'neon-chinatown': 'Neon Chinatown Night Market',
   'family-carnival': 'Family Carnival Food Playground',
@@ -72,6 +81,41 @@ const featureCards: FeatureCard[] = [
     title: 'Family-friendly night out',
     blurb: 'Easy circulation, playful moments, and photo-friendly attractions for every age group.',
     accent: 'cyan',
+  },
+]
+
+const planUpgrades: PlanUpgrade[] = [
+  {
+    title: 'Ground Floor Market Spine',
+    level: 'Ground Floor',
+    summary: 'Turn the long retail strip into a clear night-market promenade with kiosks, signature signage, and an arrival-to-escalator food trail.',
+    move: 'Create a centreline flow with food kiosks on both sides, a stronger front entry identity, and visible feature lighting drawing people toward the escalator.',
+    benefit: 'Makes the whole floor feel active from the street and gives every tenancy better exposure.',
+    tags: ['arrival magnet', 'kiosk rhythm', 'frontage activation'],
+  },
+  {
+    title: 'Escalator Glow Core',
+    level: 'Ground + Level 1',
+    summary: 'Use the escalator as the visual anchor so movement between levels feels like part of the attraction.',
+    move: 'Wrap the escalator zone with hanging lanterns, digital signage, and overhead feature lighting that can be seen from multiple viewpoints.',
+    benefit: 'Improves vertical movement and creates a memorable social-media moment in the middle of the venue.',
+    tags: ['vertical reveal', 'light feature', 'social hotspot'],
+  },
+  {
+    title: 'Level 1 Dining Cluster',
+    level: 'Level 1',
+    summary: 'Consolidate seating, service, and late-night snack offers into a stronger dining destination around the upper circulation zone.',
+    move: 'Introduce clustered seating, dessert counters, and a compact live-performance or busking edge near the open areas.',
+    benefit: 'Keeps people upstairs longer and creates a second energy zone instead of a pass-through level.',
+    tags: ['upper-level dwell', 'dessert zone', 'late-night seating'],
+  },
+  {
+    title: 'Family Photo + Festival Corner',
+    level: 'Level 1',
+    summary: 'Reserve one highlighted pocket for family-friendly attraction pieces and seasonal campaign moments.',
+    move: 'Build a photo wall, festival backdrop, and flexible activation corner that can change for launches, holidays, or themed nights.',
+    benefit: 'Adds repeat-visit value and gives the market a shareable identity beyond food alone.',
+    tags: ['campaign corner', 'family drawcard', 'repeat visits'],
   },
 ]
 
@@ -217,6 +261,7 @@ function App() {
       `${design.walkwayWidth >= 60 ? 'Keep circulation broad enough for families, queues, and slow social browsing.' : 'Review crowd pinch points carefully so busy food zones still feel comfortable.'}`,
       `${design.neonIntensity >= 80 ? 'Neon, LED signage, and façade glow should be coordinated early as a signature package.' : 'Lighting can stay expressive but needs tighter cost and maintenance control.'}`,
       `${design.familyActivation >= 60 ? 'Include safe touchpoints, flexible seating, and a family-friendly pause zone near key attractions.' : 'Keep family use secondary to dining and event energy.'}`,
+      'The uploaded floor plans suggest a strong opportunity to organise the ground floor as a linear arrival market and the upper floor as a dining and activation layer around the escalator reveal.',
       'If an interactive 3D walk-through is needed, reserve a PlayCanvas scene for the gateway, dining lane, escalator reveal, and photo zone as four navigable hotspots.',
     ],
     [design],
@@ -396,6 +441,40 @@ function App() {
                         <summary>Image prompt</summary>
                         <p>{frame.prompt}</p>
                       </details>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              <div className="section-title section-spaced">
+                <h2>Plan-based upgrade concepts</h2>
+                <p>Based on the uploaded ground floor and level 1 plans, these are the strongest layout moves to turn the site into a destination night market.</p>
+              </div>
+              <div className="upgrade-grid">
+                {planUpgrades.map((plan) => (
+                  <article key={plan.title} className="upgrade-card">
+                    <div className="upgrade-visual" aria-hidden="true">
+                      <div className="upgrade-outline">
+                        <div className="upgrade-spine" />
+                        <div className="upgrade-node node-a" />
+                        <div className="upgrade-node node-b" />
+                        <div className="upgrade-node node-c" />
+                        <div className="upgrade-glow" />
+                      </div>
+                    </div>
+                    <div className="concept-card-body">
+                      <small className="card-kicker">{plan.level}</small>
+                      <h3>{plan.title}</h3>
+                      <p>{plan.summary}</p>
+                      <ul>
+                        <li><strong>Design move:</strong> {plan.move}</li>
+                        <li><strong>Visitor benefit:</strong> {plan.benefit}</li>
+                      </ul>
+                      <div className="concept-tags">
+                        {plan.tags.map((tag) => (
+                          <span key={tag}>{tag}</span>
+                        ))}
+                      </div>
                     </div>
                   </article>
                 ))}
