@@ -253,11 +253,11 @@ function App() {
 
   const walkthroughScript = useMemo(
     () => [
-      'Scene 01. Open with Burwood at dusk, neon signs flickering on, and the market drawing people in from the street.',
-      'Scene 02. Walk past the glowing entrance arch and reveal the first burst of food stalls, smoke, colour, and crowd movement.',
-      'Scene 03. Rise beside the escalator, showing hanging décor, upper-level dining, and an expanding sea of lights.',
-      'Scene 04. Sweep through the main dining lane with live cooking, laughter, music, and the signature late-night energy.',
-      'Scene 05. End at the hero photo zone and close with a skyline-style market beauty shot inviting everyone back next weekend.',
+      'Scene 01. Open outside the venue at dusk with the glowing gateway pulling families and friend groups in from the street edge.',
+      'Scene 02. Cross the threshold and reveal the ground-floor market spine, with food kiosks, steam, signage, and fast-moving late-night energy on both sides.',
+      'Scene 03. Use the escalator core as the hero transition shot, lifting the camera through hanging lights into a wider destination reveal.',
+      'Scene 04. Pan across level 1 dining, dessert-and-tea moments, and a social backdrop zone where people stop, stay, and take photos.',
+      'Scene 05. Finish on a big destination frame showing both levels working together as one bright, memorable, must-visit night market.',
     ],
     [],
   )
@@ -486,21 +486,44 @@ function App() {
           {view === 'walkthrough' && (
             <div className="walkthrough-board">
               <div className="section-title">
-                <h2>Walk-in video</h2>
-                <p>A polished storyboard now, with a clear handoff path to final animation or a PlayCanvas interactive walk-through.</p>
+                <h2>Walk-in video proposal</h2>
+                <p>A stronger presentation section for concept film production now, with a direct path to final animation or a PlayCanvas walk-through later.</p>
+              </div>
+              <div className="walkthrough-promo">
+                <div className="walkthrough-player">
+                  <div className="player-screen">
+                    <div className="player-overlay">
+                      <span className="player-badge">48 sec concept film</span>
+                      <h3>Burwood Night Market walk-in experience</h3>
+                      <p>Entry glow, market spine energy, escalator reveal, upper dining atmosphere, and a final destination-wide hero close.</p>
+                    </div>
+                    <div className="player-play" aria-hidden="true">▶</div>
+                  </div>
+                </div>
+                <div className="walkthrough-side">
+                  <div className="deliverable-note">
+                    <small className="card-kicker">Production intent</small>
+                    <h3>What this video should sell</h3>
+                    <ul>
+                      <li>Show the project as a real family-and-friends night destination, not only a plan drawing.</li>
+                      <li>Connect ground floor food energy and level 1 dwell time in one smooth cinematic route.</li>
+                      <li>Give stakeholders a ready treatment for AI film output or a later PlayCanvas build.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div className="video-hero">
                 <div className="storyboard-panel">
-                  <div className="storyboard-frame frame-one"><span>Neon gateway</span></div>
-                  <div className="storyboard-frame frame-two"><span>Escalator reveal</span></div>
-                  <div className="storyboard-frame frame-three"><span>Dining rush</span></div>
-                  <div className="storyboard-frame frame-four"><span>Photo finale</span></div>
+                  <div className="storyboard-frame frame-one"><span>Street arrival</span></div>
+                  <div className="storyboard-frame frame-two"><span>Market spine</span></div>
+                  <div className="storyboard-frame frame-three"><span>Escalator lift</span></div>
+                  <div className="storyboard-frame frame-four"><span>Dining finale</span></div>
                 </div>
                 <div>
                   <h3>Video direction</h3>
                   <p>
-                    Shoot or generate this as a smooth evening walk-through with cinematic camera motion, glowing signage, crowd movement,
-                    hero food moments, and a final social-share payoff.
+                    Produce this as a smooth night-time walk-through with cinematic camera motion, warm food theatre, glowing signage,
+                    active crowd movement, and a closing festival-style hero shot that feels ready for launch marketing.
                   </p>
                   <ol>
                     {walkthroughScript.map((line) => (
@@ -509,7 +532,7 @@ function App() {
                   </ol>
                   <div className="playcanvas-note">
                     <strong>PlayCanvas option</strong>
-                    <p>Use PlayCanvas to turn these four scenes into clickable hotspots, a guided fly-through, or a browser-based preview walk.</p>
+                    <p>Use these scenes as the first hotspot map for a browser walk-through, guided fly-through, or click-to-explore demo.</p>
                   </div>
                 </div>
               </div>
