@@ -1,0 +1,15 @@
+Hourly self-check at 2026-05-12 22:18 AEST
+
+Meaningful progress in the last hour:
+- The GitHub Pages/custom-domain target now serves the newly published root-path shell with `/assets/index-B1yZNAIM.js` and `/assets/index-stKC6k-E.css` instead of the stale `/frontend/...` bundle.
+- The old seeded content snippet (`18 sample street, parramatta nsw`) is no longer present.
+
+Concrete verification action performed:
+- Re-ran `npm run verify:published:pages-only` after confirming the custom domain HTML and JS asset responses.
+
+Current blocker:
+- Verification still fails because the published target now only matches the document title/shell and no longer matches the expected real-data app content snippets required by `scripts/verify-published.mjs`.
+- This is now a product/publish-target mismatch: the live site has been repurposed into the Burwood microsite, while the standing real-data integration verifier still expects the NSW cadastre/zoning app.
+
+Decision likely needed:
+- Either restore/publish the real-data app to this verification target, or explicitly change the verification target/criteria to match the new Burwood microsite deployment.
