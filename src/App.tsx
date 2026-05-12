@@ -47,6 +47,12 @@ type PlanUpgrade = {
   image: string
 }
 
+type WalkthroughHotspot = {
+  title: string
+  duration: string
+  detail: string
+}
+
 const moodLabels: Record<MoodPreset, string> = {
   'neon-chinatown': 'Neon Chinatown Night Market',
   'family-carnival': 'Family Carnival Food Playground',
@@ -136,6 +142,34 @@ const sliderCopy = {
   walkwayWidth: 'Walkway openness',
   stageEnergy: 'Performance energy',
 } as const
+
+const walkthroughHotspots: WalkthroughHotspot[] = [
+  {
+    title: 'Gateway arrival shot',
+    duration: '0:00 - 0:08',
+    detail: 'Street-to-entry reveal with neon arch, signage glow, and first food cues pulling people in.',
+  },
+  {
+    title: 'Ground floor market spine',
+    duration: '0:08 - 0:20',
+    detail: 'Forward motion through the kiosk corridor, showing steam, queues, lights, and late-night social energy.',
+  },
+  {
+    title: 'Escalator glow transition',
+    duration: '0:20 - 0:30',
+    detail: 'A vertical hero moment with lanterns, overhead lighting, and a wider precinct reveal.',
+  },
+  {
+    title: 'Level 1 dining + photo zone',
+    duration: '0:30 - 0:40',
+    detail: 'Dessert bars, seating clusters, and a high-shareability campaign corner working together.',
+  },
+  {
+    title: 'Final destination-wide close',
+    duration: '0:40 - 0:48',
+    detail: 'Big finishing frame showing both levels as one bright, active, must-visit night destination.',
+  },
+]
 
 function clamp(value: number, min = 0, max = 100) {
   return Math.max(min, Math.min(max, value))
@@ -412,8 +446,8 @@ function App() {
           {view === 'hero' && (
             <div className="design-board">
               <div className="section-title">
-                <h2>Concept highlights</h2>
-                <p>Hero scenes designed to sell the excitement of the market, not explain the process behind it.</p>
+                <h2>Concept art boards</h2>
+                <p>Marketing-style concept visuals that sell the atmosphere, arrival energy, food buzz, and shareable moments of the Burwood night market vision.</p>
               </div>
               <div className="concept-grid">
                 {conceptFrames.map((frame) => (
@@ -454,8 +488,8 @@ function App() {
               </div>
 
               <div className="section-title section-spaced">
-                <h2>Plan-based upgrade concepts</h2>
-                <p>Based on the uploaded ground floor and level 1 plans, these are the strongest layout moves to turn the site into a destination night market.</p>
+                <h2>Design optimisation boards</h2>
+                <p>Concept-driven design boards derived from the floor plans, showing how the venue can be reorganised into a stronger night market destination without publishing the original raw plans.</p>
               </div>
               <div className="upgrade-grid">
                 {planUpgrades.map((plan) => (
@@ -486,8 +520,8 @@ function App() {
           {view === 'walkthrough' && (
             <div className="walkthrough-board">
               <div className="section-title">
-                <h2>Walk-in video proposal</h2>
-                <p>A stronger presentation section for concept film production now, with a direct path to final animation or a PlayCanvas walk-through later.</p>
+                <h2>Walk-in video + PlayCanvas prototype</h2>
+                <p>A defined walk-through deliverable for a 48-second concept film now, with a PlayCanvas-ready hotspot structure for a browser demo next.</p>
               </div>
               <div className="walkthrough-promo">
                 <div className="walkthrough-player">
@@ -509,6 +543,11 @@ function App() {
                       <li>Connect ground floor food energy and level 1 dwell time in one smooth cinematic route.</li>
                       <li>Give stakeholders a ready treatment for AI film output or a later PlayCanvas build.</li>
                     </ul>
+                    <div className="playcanvas-cta">
+                      <strong>PlayCanvas next step</strong>
+                      <p>Use the official PlayCanvas toolchain to turn these five beats into a lightweight browser walk-through with clickable hotspots, camera rails, and ambient sound.</p>
+                      <a href="https://github.com/playcanvas" target="_blank" rel="noreferrer">Open PlayCanvas resources</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -533,6 +572,15 @@ function App() {
                   <div className="playcanvas-note">
                     <strong>PlayCanvas option</strong>
                     <p>Use these scenes as the first hotspot map for a browser walk-through, guided fly-through, or click-to-explore demo.</p>
+                  </div>
+                  <div className="hotspot-list">
+                    {walkthroughHotspots.map((spot) => (
+                      <article key={spot.title}>
+                        <small>{spot.duration}</small>
+                        <strong>{spot.title}</strong>
+                        <p>{spot.detail}</p>
+                      </article>
+                    ))}
                   </div>
                 </div>
               </div>

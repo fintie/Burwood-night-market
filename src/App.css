@@ -607,7 +607,8 @@ input[type='range'] {
   background: linear-gradient(135deg, #facc15, #a855f7);
 }
 
-.playcanvas-note {
+.playcanvas-note,
+.playcanvas-cta {
   margin-top: 1rem;
   border-radius: 16px;
   padding: 1rem;
@@ -615,8 +616,44 @@ input[type='range'] {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.playcanvas-note strong {
+.playcanvas-note strong,
+.playcanvas-cta strong {
   color: white;
+}
+
+.playcanvas-cta a {
+  display: inline-flex;
+  margin-top: 0.8rem;
+  color: #9be8ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hotspot-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.hotspot-list article {
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hotspot-list small {
+  display: block;
+  color: #ff9ce7;
+  margin-bottom: 0.25rem;
+}
+
+.hotspot-list strong {
+  color: #fff;
+}
+
+.hotspot-list p {
+  margin: 0.35rem 0 0;
 }
 
 .builder-diagram {
