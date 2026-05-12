@@ -1,62 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1800" height="1100" viewBox="0 0 1800 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#120D20"/>
-      <stop offset="1" stop-color="#1B2740"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1800" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E0B18"/>
+      <stop offset="1" stop-color="#182842"/>
     </linearGradient>
-    <linearGradient id="titleGlow" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FF4FD8"/>
-      <stop offset="1" stop-color="#22D3EE"/>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1D1530"/>
+      <stop offset="1" stop-color="#16243C"/>
     </linearGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="24"/></filter>
   </defs>
-  <rect width="1600" height="1000" rx="32" fill="url(#bg)"/>
-  <circle cx="180" cy="140" r="120" fill="#FF4FD8" fill-opacity="0.12" filter="url(#blur)"/>
-  <circle cx="1380" cy="150" r="140" fill="#22D3EE" fill-opacity="0.10" filter="url(#blur)"/>
-  <text x="90" y="90" fill="#FDFDFF" font-size="46" font-family="Arial, Helvetica, sans-serif" font-weight="700">Level 1 Optimisation Plan</text>
-  <text x="90" y="132" fill="#AFC0E8" font-size="24" font-family="Arial, Helvetica, sans-serif">Burwood Night Market, upper-level dining and activation strategy</text>
+  <rect width="1800" height="1100" rx="36" fill="url(#bg)"/>
+  <circle cx="160" cy="130" r="130" fill="#F472B6" fill-opacity="0.12" filter="url(#soft)"/>
+  <circle cx="1530" cy="120" r="150" fill="#22D3EE" fill-opacity="0.10" filter="url(#soft)"/>
+  <text x="90" y="88" fill="#FAFBFF" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="700">Level 1 Optimisation Plan</text>
+  <text x="90" y="130" fill="#AFC0E8" font-size="24" font-family="Arial, Helvetica, sans-serif">Burwood Night Market, refined upper-level dining and activation strategy</text>
+  <g transform="translate(70 180)">
+    <rect width="1140" height="760" rx="34" fill="url(#panel)" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
+    
+  <rect x="54" y="58" width="1028" height="630" rx="26" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.14)" stroke-width="2"/>
+  <rect x="114" y="158" width="328" height="162" rx="24" fill="#22C7A8" fill-opacity="0.22" stroke="#22C7A8" stroke-width="2"/>
+  <rect x="490" y="122" width="242" height="116" rx="24" fill="#FFB020" fill-opacity="0.22" stroke="#FFB020" stroke-width="2"/>
+  <rect x="792" y="126" width="236" height="130" rx="24" fill="#F472B6" fill-opacity="0.20" stroke="#F472B6" stroke-width="2"/>
+  <rect x="520" y="284" width="210" height="176" rx="80" fill="#38BDF8" fill-opacity="0.22" stroke="#38BDF8" stroke-width="3"/>
+  <rect x="812" y="316" width="244" height="120" rx="24" fill="#FFB020" fill-opacity="0.16" stroke="#FFB020" stroke-dasharray="10 10"/>
+  <rect x="116" y="480" width="914" height="126" rx="24" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.09)" stroke-dasharray="10 12"/>
+  <path d="M176 364 C286 364, 400 346, 520 338" stroke="#38BDF8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M730 338 C834 338, 922 286, 1010 202" stroke="#38BDF8" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="176" cy="364" r="12" fill="#38BDF8"/>
+  <circle cx="520" cy="338" r="12" fill="#38BDF8"/>
+  <circle cx="1010" cy="202" r="12" fill="#38BDF8"/>
+  <text x="130" y="524" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Upper-level strategy</text>
+  <text x="130" y="560" fill="#C8D3EF" font-size="20" font-family="Arial, Helvetica, sans-serif">Make level 1 a destination, not a pass-through, by clustering dining, dessert theatre, and social-share moments around the circulation core.</text>
   
-  <g transform="translate(90 190)">
-    <rect width="1370" height="500" rx="34" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)" stroke-width="3"/>
-    <rect x="110" y="120" width="340" height="160" rx="28" fill="#2DD4BF" fill-opacity="0.18" stroke="#2DD4BF"/>
-    <text x="144" y="184" fill="#FFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Main Dining Terrace</text>
-    <text x="144" y="220" fill="#D4FFF7" font-size="20" font-family="Arial, Helvetica, sans-serif">Longer-stay seating for families, friends, and shared meals</text>
-
-    <rect x="492" y="86" width="260" height="126" rx="26" fill="#FF9F1C" fill-opacity="0.20" stroke="#FF9F1C"/>
-    <text x="526" y="142" fill="#FFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Dessert + Tea Row</text>
-    <text x="526" y="176" fill="#FBE7C3" font-size="20" font-family="Arial, Helvetica, sans-serif">Sweet drinks, dessert theatre, late-night linger</text>
-
-    <rect x="850" y="92" width="250" height="138" rx="26" fill="#F472B6" fill-opacity="0.20" stroke="#F472B6"/>
-    <text x="882" y="150" fill="#FFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Photo Event Zone</text>
-    <text x="882" y="184" fill="#FBE1F0" font-size="20" font-family="Arial, Helvetica, sans-serif">Seasonal backdrop, launch moment, social share wall</text>
-
-    <rect x="560" y="250" width="260" height="176" rx="100" fill="#38BDF8" fill-opacity="0.20" stroke="#38BDF8" stroke-width="4"/>
-    <text x="606" y="324" fill="#FFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Escalator Hub</text>
-    <text x="594" y="362" fill="#D8F3FF" font-size="20" font-family="Arial, Helvetica, sans-serif">Upper-level reveal and circulation anchor</text>
-
-    <rect x="910" y="286" width="300" height="134" rx="26" fill="#FF9F1C" fill-opacity="0.16" stroke="#FF9F1C" stroke-dasharray="12 10"/>
-    <text x="944" y="344" fill="#FFF" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="700">Flexible Pop-up Strip</text>
-    <text x="944" y="378" fill="#FBE7C3" font-size="19" font-family="Arial, Helvetica, sans-serif">Rotating brands, themed booths, campaign vendor slots</text>
-
-    <path d="M190 330 C320 330, 410 310, 560 310" stroke="#38BDF8" stroke-width="16" stroke-linecap="round"/>
-    <path d="M820 310 C900 310, 980 260, 1100 176" stroke="#38BDF8" stroke-width="16" stroke-linecap="round"/>
-
-    <circle cx="190" cy="330" r="14" fill="#38BDF8"/>
-    <circle cx="560" cy="310" r="14" fill="#38BDF8"/>
-    <circle cx="1100" cy="176" r="14" fill="#38BDF8"/>
-
-    <text x="110" y="456" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Planning intent</text>
-    <text x="110" y="490" fill="#C8D3EF" font-size="20" font-family="Arial, Helvetica, sans-serif">Build a strong upper-level reason to stay with dining, desserts, social moments, and visible festival activity.</text>
+  <g>
+    <rect x="86" y="42" width="290" height="88" rx="18" fill="rgba(7,10,18,0.72)" stroke="#22C7A8"/>
+    <text x="104" y="76" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Main dining terrace</text>
+    <text x="104" y="104" fill="#D9E3F9" font-size="18" font-family="Arial, Helvetica, sans-serif">Flexible seating for longer stays and family groups</text>
   </g>
   
-  <g transform="translate(1120 770)">
-    <rect width="380" height="170" rx="24" fill="rgba(8,12,24,0.55)" stroke="rgba(255,255,255,0.12)"/>
-    <text x="28" y="40" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Design key</text>
-    <rect x="30" y="62" width="24" height="24" rx="8" fill="#FF9F1C"/><text x="70" y="80" fill="#D6DDF4" font-size="20" font-family="Arial, Helvetica, sans-serif">Food kiosks / active retail</text>
-    <rect x="30" y="98" width="24" height="24" rx="8" fill="#2DD4BF"/><text x="70" y="116" fill="#D6DDF4" font-size="20" font-family="Arial, Helvetica, sans-serif">Seating / dwell zone</text>
-    <rect x="30" y="134" width="24" height="24" rx="8" fill="#F472B6"/><text x="70" y="152" fill="#D6DDF4" font-size="20" font-family="Arial, Helvetica, sans-serif">Activation / photo / event zone</text>
-    <path d="M245 145 C280 130, 320 118, 345 92" stroke="#38BDF8" stroke-width="10" stroke-linecap="round"/>
-    <text x="250" y="152" fill="#D6DDF4" font-size="20" font-family="Arial, Helvetica, sans-serif">Primary visitor flow</text>
+  <g>
+    <rect x="462" y="28" width="290" height="88" rx="18" fill="rgba(7,10,18,0.72)" stroke="#FFB020"/>
+    <text x="480" y="62" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Dessert + tea row</text>
+    <text x="480" y="90" fill="#D9E3F9" font-size="18" font-family="Arial, Helvetica, sans-serif">Late-night drinks, sweets, and queue theatre</text>
+  </g>
+  
+  <g>
+    <rect x="766" y="24" width="290" height="88" rx="18" fill="rgba(7,10,18,0.72)" stroke="#F472B6"/>
+    <text x="784" y="58" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Photo event zone</text>
+    <text x="784" y="86" fill="#D9E3F9" font-size="18" font-family="Arial, Helvetica, sans-serif">Seasonal backdrops and campaign activation</text>
+  </g>
+  
+  <g>
+    <rect x="472" y="474" width="290" height="88" rx="18" fill="rgba(7,10,18,0.72)" stroke="#38BDF8"/>
+    <text x="490" y="508" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Escalator hub</text>
+    <text x="490" y="536" fill="#D9E3F9" font-size="18" font-family="Arial, Helvetica, sans-serif">Upper reveal and circulation anchor</text>
+  </g>
+  
+  <g>
+    <rect x="790" y="462" width="290" height="88" rx="18" fill="rgba(7,10,18,0.72)" stroke="#FFB020"/>
+    <text x="808" y="496" fill="#FFFFFF" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="700">Flexible pop-up strip</text>
+    <text x="808" y="524" fill="#D9E3F9" font-size="18" font-family="Arial, Helvetica, sans-serif">Rotating vendors and themed booths</text>
+  </g>
+
+  </g>
+  <g transform="translate(1240 180)">
+    <rect width="490" height="760" rx="32" fill="rgba(10,14,25,0.55)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="34" y="52" fill="#FFFFFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Design legend</text>
+    <rect x="36" y="86" width="28" height="28" rx="8" fill="#FFB020"/><text x="82" y="107" fill="#D7E0F7" font-size="21" font-family="Arial, Helvetica, sans-serif">Food kiosks / active frontage</text>
+    <rect x="36" y="128" width="28" height="28" rx="8" fill="#22C7A8"/><text x="82" y="149" fill="#D7E0F7" font-size="21" font-family="Arial, Helvetica, sans-serif">Dining / seating dwell zone</text>
+    <rect x="36" y="170" width="28" height="28" rx="8" fill="#F472B6"/><text x="82" y="191" fill="#D7E0F7" font-size="21" font-family="Arial, Helvetica, sans-serif">Activation / photo / event zone</text>
+    <rect x="36" y="212" width="28" height="28" rx="8" fill="#38BDF8"/><text x="82" y="233" fill="#D7E0F7" font-size="21" font-family="Arial, Helvetica, sans-serif">Escalator / circulation anchor</text>
+    <path d="M40 286 C100 286, 140 270, 188 246" stroke="#38BDF8" stroke-width="10" stroke-linecap="round"/>
+    <text x="212" y="286" fill="#D7E0F7" font-size="21" font-family="Arial, Helvetica, sans-serif">Primary visitor movement</text>
+    <text x="34" y="350" fill="#FFFFFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">Planning notes</text>
+    
+  <circle cx="48" cy="404" r="6" fill="#FFB020"/>
+  <text x="68" y="412" fill="#F6F8FF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Dwell time uplift</text>
+  <text x="68" y="444" fill="#B8C7E9" font-size="19" font-family="Arial, Helvetica, sans-serif">Seat clusters and dessert offers should encourage second-round spending and social pause.</text>
+
+  <circle cx="48" cy="492" r="6" fill="#FFB020"/>
+  <text x="68" y="500" fill="#F6F8FF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Campaign flexibility</text>
+  <text x="68" y="532" fill="#B8C7E9" font-size="19" font-family="Arial, Helvetica, sans-serif">The event/photo zone should support launches, seasonal dressing, and branded content.</text>
+
+  <circle cx="48" cy="580" r="6" fill="#FFB020"/>
+  <text x="68" y="588" fill="#F6F8FF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Level identity</text>
+  <text x="68" y="620" fill="#B8C7E9" font-size="19" font-family="Arial, Helvetica, sans-serif">Differentiate level 1 as a richer stay-and-share environment, not only overflow circulation.</text>
+
   </g>
 </svg>
