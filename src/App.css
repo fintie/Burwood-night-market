@@ -440,68 +440,11 @@ input[type='range'] {
   padding: 1rem;
 }
 
-.upgrade-outline {
-  position: relative;
-  min-height: 240px;
+.upgrade-image {
+  width: 100%;
   border-radius: 18px;
-  overflow: hidden;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
-    linear-gradient(135deg, #221734 0%, #161f36 100%);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
-}
-
-.upgrade-outline::before {
-  content: '';
-  position: absolute;
-  inset: 12% 10%;
-  border-radius: 26px;
-  border: 2px solid rgba(255,255,255,0.16);
-}
-
-.upgrade-spine {
-  position: absolute;
-  left: 18%;
-  right: 18%;
-  top: 46%;
-  height: 16px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #f59e0b, #ec4899, #22d3ee);
-  box-shadow: 0 0 18px rgba(255, 104, 177, 0.45);
-}
-
-.upgrade-node {
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  border-radius: 20px;
-  border: 2px solid rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 0 20px rgba(255,255,255,0.08);
-}
-
-.node-a {
-  left: 14%;
-  top: 24%;
-}
-
-.node-b {
-  left: 40%;
-  top: 58%;
-}
-
-.node-c {
-  right: 14%;
-  top: 28%;
-}
-
-.upgrade-glow {
-  position: absolute;
-  inset: auto 12% 14% 12%;
-  height: 42px;
-  border-radius: 999px;
-  background: rgba(255, 79, 216, 0.22);
-  filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
 }
 
 .concept-tags span,

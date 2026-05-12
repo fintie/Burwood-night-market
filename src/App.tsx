@@ -1,4 +1,6 @@
 import { useMemo, useState } from 'react'
+import groundFloorOptimized from '../plan-graphics/ground-floor-optimized.svg'
+import levelOneOptimized from '../plan-graphics/level-1-optimized.svg'
 import './App.css'
 
 type MoodPreset = 'neon-chinatown' | 'family-carnival' | 'festival-premium'
@@ -42,6 +44,7 @@ type PlanUpgrade = {
   move: string
   benefit: string
   tags: string[]
+  image: string
 }
 
 const moodLabels: Record<MoodPreset, string> = {
@@ -92,6 +95,7 @@ const planUpgrades: PlanUpgrade[] = [
     move: 'Create a centreline flow with food kiosks on both sides, a stronger front entry identity, and visible feature lighting drawing people toward the escalator.',
     benefit: 'Makes the whole floor feel active from the street and gives every tenancy better exposure.',
     tags: ['arrival magnet', 'kiosk rhythm', 'frontage activation'],
+    image: groundFloorOptimized,
   },
   {
     title: 'Escalator Glow Core',
@@ -100,6 +104,7 @@ const planUpgrades: PlanUpgrade[] = [
     move: 'Wrap the escalator zone with hanging lanterns, digital signage, and overhead feature lighting that can be seen from multiple viewpoints.',
     benefit: 'Improves vertical movement and creates a memorable social-media moment in the middle of the venue.',
     tags: ['vertical reveal', 'light feature', 'social hotspot'],
+    image: groundFloorOptimized,
   },
   {
     title: 'Level 1 Dining Cluster',
@@ -108,6 +113,7 @@ const planUpgrades: PlanUpgrade[] = [
     move: 'Introduce clustered seating, dessert counters, and a compact live-performance or busking edge near the open areas.',
     benefit: 'Keeps people upstairs longer and creates a second energy zone instead of a pass-through level.',
     tags: ['upper-level dwell', 'dessert zone', 'late-night seating'],
+    image: levelOneOptimized,
   },
   {
     title: 'Family Photo + Festival Corner',
@@ -116,6 +122,7 @@ const planUpgrades: PlanUpgrade[] = [
     move: 'Build a photo wall, festival backdrop, and flexible activation corner that can change for launches, holidays, or themed nights.',
     benefit: 'Adds repeat-visit value and gives the market a shareable identity beyond food alone.',
     tags: ['campaign corner', 'family drawcard', 'repeat visits'],
+    image: levelOneOptimized,
   },
 ]
 
@@ -453,14 +460,8 @@ function App() {
               <div className="upgrade-grid">
                 {planUpgrades.map((plan) => (
                   <article key={plan.title} className="upgrade-card">
-                    <div className="upgrade-visual" aria-hidden="true">
-                      <div className="upgrade-outline">
-                        <div className="upgrade-spine" />
-                        <div className="upgrade-node node-a" />
-                        <div className="upgrade-node node-b" />
-                        <div className="upgrade-node node-c" />
-                        <div className="upgrade-glow" />
-                      </div>
+                    <div className="upgrade-visual">
+                      <img src={plan.image} alt={`${plan.title} design optimisation plan`} className="upgrade-image" />
                     </div>
                     <div className="concept-card-body">
                       <small className="card-kicker">{plan.level}</small>
