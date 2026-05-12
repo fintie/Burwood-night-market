@@ -143,7 +143,7 @@ function clamp(value: number, min = 0, max = 100) {
 
 function App() {
   const [design, setDesign] = useState<DesignState>(initialState)
-  const [view, setView] = useState<DeliverableView>('hero')
+  const [view, setView] = useState<DeliverableView>('walkthrough')
 
   const scoreCard = useMemo(() => {
     const foodBuzz = clamp(
@@ -340,8 +340,8 @@ function App() {
       <section className="toolbar">
         <div className="view-tabs">
           {[
-            ['hero', 'Highlights'],
             ['walkthrough', 'Walk-in video'],
+            ['hero', 'Highlights'],
             ['builder', 'Build notes'],
             ['prompt-lab', 'Prompt editor'],
           ].map(([key, label]) => (
