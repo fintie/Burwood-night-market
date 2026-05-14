@@ -6,6 +6,14 @@ import './App.css'
 type MoodPreset = 'neon-chinatown' | 'family-carnival' | 'festival-premium'
 type DeliverableView = 'hero' | 'walkthrough' | 'builder' | 'prompt-lab'
 
+type VideoBeat = {
+  title: string
+  lens: string
+  atmosphere: string
+  action: string
+  deliverable: string
+}
+
 type DesignState = {
   prompt: string
   mood: MoodPreset
@@ -168,6 +176,37 @@ const walkthroughHotspots: WalkthroughHotspot[] = [
     title: 'Final destination-wide close',
     duration: '0:40 - 0:48',
     detail: 'Big finishing frame showing both levels as one bright, active, must-visit night destination.',
+  },
+]
+
+const videoBeats: VideoBeat[] = [
+  {
+    title: 'Street arrival hero',
+    lens: '24mm establishing shot',
+    atmosphere: 'Glowing entry arch, lantern rhythm, warm dusk sky, first crowds arriving',
+    action: 'Camera glides from footpath into the market threshold as signage and food cues come alive.',
+    deliverable: 'Use as the opening hero frame and first 8 seconds of the cut.',
+  },
+  {
+    title: 'Market spine energy',
+    lens: '35mm forward tracking',
+    atmosphere: 'Steam, queues, grill fire, side seating, bright stall markers',
+    action: 'Move down the ground-floor food corridor with layered pedestrian motion and food theatre on both sides.',
+    deliverable: 'Primary movement section for the middle of the film.',
+  },
+  {
+    title: 'Escalator reveal',
+    lens: 'Wide atrium lift shot',
+    atmosphere: 'Feature lighting, hanging décor, vertical reveal to upper level activity',
+    action: 'Rise with the escalator and widen to show the venue turning into one connected destination.',
+    deliverable: 'Signature transition beat and most shareable motion shot.',
+  },
+  {
+    title: 'Dining finale',
+    lens: '50mm lifestyle close and wide pull-back',
+    atmosphere: 'Dessert counters, family groups, photo wall, lively upper-level seating',
+    action: 'Land in the level 1 zone, then finish on a broad destination-wide closing shot.',
+    deliverable: 'Closing beat plus thumbnail-ready final frame.',
   },
 ]
 
@@ -491,6 +530,20 @@ function App() {
                 <h2>Design optimisation boards</h2>
                 <p>Concept-driven design boards derived from the floor plans, showing how the venue can be reorganised into a stronger night market destination without publishing the original raw plans.</p>
               </div>
+              <div className="design-proof-strip">
+                <article>
+                  <strong>Real design boards included</strong>
+                  <p>These are not placeholders. The two plan graphics below are the actual optimised venue diagrams now published on the live site.</p>
+                </article>
+                <article>
+                  <strong>Ground floor focus</strong>
+                  <p>Arrival identity, kiosk rhythm, and stronger pull from the street edge toward the escalator core.</p>
+                </article>
+                <article>
+                  <strong>Level 1 focus</strong>
+                  <p>Dining dwell time, family photo moments, dessert clustering, and a clearer second energy zone.</p>
+                </article>
+              </div>
               <div className="upgrade-grid">
                 {planUpgrades.map((plan) => (
                   <article key={plan.title} className="upgrade-card">
@@ -525,6 +578,10 @@ function App() {
               </div>
               <div className="walkthrough-promo">
                 <div className="walkthrough-player">
+                  <div className="player-status">
+                    <span className="status-dot" aria-hidden="true" />
+                    Video deliverable status: treatment, shot list, and keyframes ready for production
+                  </div>
                   <div className="player-screen">
                     <div className="player-overlay">
                       <span className="player-badge">48 sec concept film</span>
@@ -532,6 +589,10 @@ function App() {
                       <p>Entry glow, market spine energy, escalator reveal, upper dining atmosphere, and a final destination-wide hero close.</p>
                     </div>
                     <div className="player-play" aria-hidden="true">▶</div>
+                  </div>
+                  <div className="video-deliverable-copy">
+                    <strong>What is live right now</strong>
+                    <p>The site now includes the real video treatment, the exact scene order, and four production-ready keyframe directions. The final rendered film still needs to be produced separately.</p>
                   </div>
                 </div>
                 <div className="walkthrough-side">
@@ -572,6 +633,17 @@ function App() {
                   <div className="playcanvas-note">
                     <strong>PlayCanvas option</strong>
                     <p>Use these scenes as the first hotspot map for a browser walk-through, guided fly-through, or click-to-explore demo.</p>
+                  </div>
+                  <div className="video-beat-list">
+                    {videoBeats.map((beat) => (
+                      <article key={beat.title}>
+                        <small>{beat.lens}</small>
+                        <strong>{beat.title}</strong>
+                        <p><strong>Atmosphere:</strong> {beat.atmosphere}</p>
+                        <p><strong>Action:</strong> {beat.action}</p>
+                        <p><strong>Deliverable:</strong> {beat.deliverable}</p>
+                      </article>
+                    ))}
                   </div>
                   <div className="hotspot-list">
                     {walkthroughHotspots.map((spot) => (
